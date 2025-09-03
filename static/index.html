@@ -78,17 +78,13 @@
 
         <div id="response-div"></div>
 
+        <form hx-post="/validate" hx-target="#response-div" hx-swap="innerHTML">
+            <input type="text" name="name" placeholder="Enter your name" />
+            <button type="submit">Submit</button>
+        </form>
 
-    <form hx-post="/validate" hx-target="#response-div" hx-swap="innerHTML">
-        <input type="text" name="name" placeholder="Enter your name">
-        <button type="submit">Submit</button>
-    </form>
-
-    <div id="weather-div" hx-get="/weather" hx-trigger="load">
-        Loading weather...
-    </div>
-</body>
-</html>
-
+        <div id="weather-div" hx-get="/weather" hx-trigger="load">
+            Loading weather...
+        </div>
     </body>
 </html>
